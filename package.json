@@ -1,0 +1,22 @@
+{
+  "name": "musictnt",
+  "version": "1.0.0",
+  "description": "app nghe nhạc ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-handlebars": "^5.3.3",
+    "nhaccuatui-api-full": "^1.1.0",
+    "zingmp3-api-full": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,406 @@
+<div id="app">
+    <div class="grid wide">
+        <div class="container">
+            <div class="row app__music">
+                <div class="col l-3" id="left-sidebar">
+                    <div class="sidebar ">
+
+                        <div class="sidebar__container">
+                            <nav class="navbar">
+                                <a href="/" class="navbar__logo">
+                                    <img src="./img/pngfind.com-music-symbol-png-1898531.png" alt="logo">
+                                </a>
+                                <div class="navbar__menu navbar__home ">
+                                    <ul class="navbar__list ">
+                                        <!-- add active select item -->
+                                        <li class="navbar__item  active">
+                                            <a href="/" class="navbar__link">
+                                                <i class="ri-home-8-line"></i>
+                                                <span>Trang chủ</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar__item ">
+                                            <div class="navbar__link">
+                                                <i class="ri-line-chart-line"></i>
+                                                <span>Top 100</span>
+                                            </div>
+                                        </li>
+                                        <li class="navbar__item">
+                                            <div class="navbar__link">
+                                                <i class="ri-compass-3-line"></i>
+                                                <span>Thể loại</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {{!-- <div class="navbar__menu navbar__discover">
+                                    <ul class="navbar__list ">
+                                        <!-- add active select item -->
+                                        <li class="navbar__item  ">
+                                            <p class="navbar__title"> Discover</p>
+                                            <div class="navbar__link">
+                                                <i class="ri-apps-line"></i>
+                                                <span>New and Notable</span>
+                                            </div>
+                                        </li>
+                                        <li class="navbar__item ">
+                                            <div class="navbar__link">
+                                                <i class="ri-calendar-2-line"></i>
+                                                <span>Release Calendar</span>
+                                            </div>
+                                        </li>
+                                        <li class="navbar__item">
+                                            <div class="navbar__link">
+                                                <i class="ri-gift-line"></i>
+                                                <span>Events</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> --}}
+                                <div class="navbar__menu">
+                                    <ul class="navbar__list ">
+                                        <!-- add active select item -->
+                                        <li class="navbar__item  navbar__discover">
+                                            {{!-- <p class="navbar__title"> Discover</p> --}}
+                                            <div class="navbar__link">
+                                                <i class="ri-heart-line"></i>
+                                                <span>Danh sách yêu thích</span>
+                                            </div>
+                                        </li>
+                                        <li class="navbar__item ">
+                                            <div class="navbar__link">
+                                                <i class="ri-star-line"></i>
+                                                <span>Nhạc mới</span>
+                                            </div>
+                                        </li>
+                                        <li class="navbar__item">
+                                            <div class="navbar__link login">
+                                                <i class="ri-user-3-line"></i>
+                                                <span> Đăng Nhập</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="song__info ">
+                                    <div class="song__info__container">
+                                        <div class="song__info__img"></div>
+                                        <div class="song__info__data">
+                                            <h3 class="song__info__title"></h3>
+                                            <p class="song__info__singer"></p>
+                                        </div>
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="overlay__sidebar">
+
+                    </div>
+                </div>
+                <div class="col l-6 c-12">
+                    <div class="container__app">
+
+                        <div class="search">
+                            <div class="menu__mobile">
+                                <i class="ri-menu-2-line"></i>
+                            </div>
+                            <div class="search__data">
+                                <input type="text" name="search-song" id="search-song"
+                                    placeholder="Tìm kiếm bài hát, nghệ sĩ, album,...">
+                                <div class="search__button">
+                                    <i class="ri-search-line"></i>
+                                </div>
+                            </div>
+                            <div class="item__search ">
+                                <!-- add active -->
+                                <div class="item__search__content ">
+                                    <ul class="item__search__list">
+                                        {{!-- <li class="item__search__item">
+                                            <div class="item__search__data">
+                                                <img src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/b/1/1/db11f9bb085242d06f298939da35a094.jpg?fs=MTY0MjQ5ODI2MjQ0Nnx3ZWJWNHw"
+                                                    alt="">
+                                                <div class="item__search__info">
+                                                    <h3 class="item__search__title">Đế Vương</h3>
+                                                    <p class="item__search__title">Sơn Tùng</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item__search__item">
+                                            <div class="item__search__data">
+                                                <img src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/b/1/1/db11f9bb085242d06f298939da35a094.jpg?fs=MTY0MjQ5ODI2MjQ0Nnx3ZWJWNHw"
+                                                    alt="">
+                                                <div class="item__search__info">
+                                                    <h3 class="item__search__title">Đế Vương</h3>
+                                                    <p class="item__search__title">Sơn Tùng</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item__search__item">
+                                            <div class="item__search__data">
+                                                <img src="https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/b/1/1/db11f9bb085242d06f298939da35a094.jpg?fs=MTY0MjQ5ODI2MjQ0Nnx3ZWJWNHw"
+                                                    alt="">
+                                                <div class="item__search__info">
+                                                    <h3 class="item__search__title">Đế Vương</h3>
+                                                    <p class="item__search__title">Sơn Tùng</p>
+                                                </div>
+                                            </div>
+                                        </li> --}}
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container__mobile">
+
+
+                            <div class="trending">
+                                <div class="trending__data">
+                                    <p class="trending__status">What's hot 🔥</p>
+                                    <h2 class="trending__title">Trending</h2>
+                                </div>
+
+                                <div class="app__banner">
+                                    <div class="swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            {{!-- <div class="swiper-slide">
+                                                <a href="" class="app__banner__link">
+                                                    <img src="https://adtima-media.zascdn.me/2022/01/dce230bf-e9b1-4795-a575-e53b18c880f2.jpg"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="app__banner__link">
+                                                    <img src="https://photo-zmp3.zadn.vn/banner/f/1/4/4/f144430584e7d308c305b6dfccb4714c.jpg"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="app__banner__link">
+                                                    <img src="https://photo-zmp3.zadn.vn/banner/d/e/0/2/de0235cd111156c9c84d73a1dbeb2316.jpg"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="app__banner__link">
+                                                    <img src="https://photo-zmp3.zadn.vn/banner/0/c/f/7/0cf741371daf192a792479fc7bcab88f.jpg"
+                                                        alt="">
+                                                </a>
+                                            </div> --}}
+
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- playlist -->
+
+                            <h3 class="trending__title-1">những bài hát</h3>
+
+
+                            <div class="top__music">
+                                <div class="row" id="music-playlist">
+                                    {{!-- <div class="col c-6">
+                                        <div class="top__item">
+                                            <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/0/1/f/e/01fe87e32872fbdb28812416ea5c4474.jpg"
+                                                alt="">
+                                            <h3 class="top__item__title">V-POP Nhạc mới nổi bật</h3>
+                                            <span class="top__item__singer">Nhiều nghệ sĩ</span>
+                                        </div>
+                                    </div>
+                                    <div class="col c-6">
+                                        <div class="top__item">
+                                            <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/e/f/b/4/efb4af3420fdeb4663caa6bed9334d1c.jpg"
+                                                alt="">
+                                            <h3 class="top__item__title">V-POP Nhạc mới nổi bật</h3>
+                                            <span class="top__item__singer">Nhiều nghệ sĩ</span>
+                                        </div>
+                                    </div>
+                                    <div class="col c-6">
+                                        <div class="top__item">
+                                            <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/f/f/3/1/ff3190a3153daf1b1884c307fffc1ebe.jpg"
+                                                alt="">
+                                            <h3 class="top__item__title">V-POP Nhạc mới nổi bật</h3>
+                                            <span class="top__item__singer">Nhiều nghệ sĩ</span>
+                                        </div>
+                                    </div>
+                                    <div class="col c-6">
+                                        <div class="top__item">
+                                            <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/5/1/d/e/51de6feba4710fcf1898040c88d7e42e.jpg"
+                                                alt="">
+                                            <h3 class="top__item__title">V-POP Nhạc mới nổi bật</h3>
+                                            <span class="top__item__singer">Nhiều nghệ sĩ</span>
+                                        </div>
+                                    </div> --}}
+
+                                </div>
+                            </div>
+
+                            <div class="items__top__song">
+                                <div class="dashboard__content">
+                                    <h3 class="dashboard__title">
+                                        Bản xếp hạng
+                                    </h3>
+                                    <p class="dashboard__show_playlist">Show on ></p>
+
+                                </div>
+                                <ul class="list__song">
+
+                                    <!-- add to class playing in song play -->
+
+                                    {{!-- <li class="item__song ">
+                                        <span class="item__song__number">1
+                                        </span>
+                                        <i class="ri-volume-up-line music__play"></i>
+                                        <span class="item__song__name">Mang tiền về cho mẹ</span>
+                                        <span class="item__song__singer">Đen vâu</span>
+                                        <span class="item__song__time">4:05</span>
+                                    </li> --}}
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col l-3 ">
+                    <div class="content__music ">
+                        <div class="content__tag">
+                            <div class="tag__item">
+                                <a href="#" class="tag__text" id="test">️🎹 Piano</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="" class="tag__text">🌥️Chill</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="" class="tag__text">🎧Acoustic</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="" class="tag__text">👉Beat</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="" class="tag__text">💓Pop</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="" class="tag__text">🎸Jazz</a>
+                            </div>
+                        </div>
+
+                        <div class="artists">
+                            <h3 class="artists__list__title"> Fav Artists</h3>
+                            <ul class="artists__list">
+                                <li class="artists__item">
+                                    <a href="" class="artists__link">
+                                        <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/2/a/4/c/2a4c965e4e0ca08dd3f2464864aa8fca.jpg"
+                                            alt="" class="artists__img">
+                                        <div class="artists__data">
+                                            <h3 class="artists__data__name">Khắc Việt</h3>
+                                            <p class="artists__data__description">17 Bài hát trong thư viện</p>
+                                        </div>
+                                        <i class="ri-more-fill"></i>
+                                    </a>
+                                </li>
+                                <li class="artists__item">
+                                    <a href="" class="artists__link">
+                                        <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/2/a/4/c/2a4c965e4e0ca08dd3f2464864aa8fca.jpg"
+                                            alt="" class="artists__img">
+                                        <div class="artists__data">
+                                            <h3 class="artists__data__name">Khắc Việt</h3>
+                                            <p class="artists__data__description">17 Bài hát trong thư viện</p>
+                                        </div>
+                                        <i class="ri-more-fill"></i>
+                                    </a>
+                                </li>
+                                <li class="artists__item">
+                                    <a href="" class="artists__link">
+                                        <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/2/a/4/c/2a4c965e4e0ca08dd3f2464864aa8fca.jpg"
+                                            alt="" class="artists__img">
+                                        <div class="artists__data">
+                                            <h3 class="artists__data__name">Khắc Việt</h3>
+                                            <p class="artists__data__description">17 Bài hát trong thư viện</p>
+                                        </div>
+                                        <i class="ri-more-fill"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="trending__title-1">TOP 100</h3>
+
+                        <div class="suggest">
+                            <div class="suggest__content">
+                                <div class="suggest__content__photo">
+
+                                    <img src="https://photo-resize-zmp3.zadn.vn/w320_r1x1_webp/cover/0/1/f/e/01fe87e32872fbdb28812416ea5c4474.jpg"
+                                        alt="" class="suggest-photo-img">
+                                </div>
+                                <div class="suggest__content__p">
+
+                                    <div class="suggest__data">
+                                        <h3 class="suggest__data__title">V-POP nhạc mới nổi bật</h3>
+                                        <span class="suggerst__drs">
+                                            Lựa chọn V-Pop mới mẻ mà bạn
+                                        </span>
+                                    </div>
+                                    <i class="ri-add-circle-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="control__play">
+                    <span id="name__play__song"></span>
+                    <div class="control__data">
+                        <div class="control__button">
+                            <div class="add__list__album">
+                                {{!-- <i class="ri-heart-fill"></i> --}}
+                                {{!-- <i class="ri-add-box-line"></i>
+                                <i class="ri-fullscreen-line"></i> --}}
+                            </div>
+                            <!-- add playing-->
+                            <div class="control__center ">
+                                <i class="ri-repeat-line" class=""></i>
+                                <i class="ri-rewind-fill btn-control"></i>
+                                <div id="play__app-music">
+                                    <i class="ri-pause-circle-fill btn-control btn-pause"></i>
+                                    <i class="ri-play-circle-fill btn-control btn__play"></i>
+                                </div>
+                                <i class="ri-speed-fill btn-control"></i>
+                                <i class="ri-shuffle-line"></i>
+                            </div>
+                            <div class="control__volume">
+                                <i class="ri-volume-down-fill"></i>
+                                <input type="range" min="1" max="100" value="100" id="voulume">
+                                <i class="ri-volume-up-line"></i>
+                            </div>
+                        </div>
+                        <div class="control__time">
+                            <div class="time__data">
+                                <span class="time__start">00:00</span>
+                                <input type="range" min="1" max="100" value="0" id="timesong">
+                                <span class="time__end">00:00</span>
+
+                            </div>
+
+                        </div>
+                        <audio id="source-mp3">
+
+                        </audio>
+                    </div>
+
+                </div>
+                {{!-- <div class="login__user">
+
+                </div>
+                <div class="overlay__login"></div> --}}
+            </div>
+        </div>
+    </div>
+
+</div>
